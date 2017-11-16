@@ -1,8 +1,8 @@
-import socket
+import netifaces as ni
 
 
 def get_ip():
-    return socket.gethostbyname(socket.gethostname())
+    return ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
 
 
 print(get_ip())
