@@ -1,0 +1,23 @@
+/* Create two equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column1 img {
+    margin-top: 12px;
+    width: 50%;
+}
+
+.column2 img {
+    margin-top: 12px;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
